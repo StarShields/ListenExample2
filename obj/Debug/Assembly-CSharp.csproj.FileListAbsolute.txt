@@ -1,0 +1,2 @@
+D:\ListenExample2\ListenExample2\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\ListenExample2\ListenExample2\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
