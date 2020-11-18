@@ -64,7 +64,6 @@
   <ItemGroup>
     <Compile Include="Assets\CryoControl.cs" />
     <Compile Include="Assets\Cryonis.cs" />
-    <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\ListeningSkill.cs" />
     <Compile Include="Assets\RenderPriority.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />

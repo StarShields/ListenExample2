@@ -5,45 +5,46 @@ using UnityEngine;
 public class ListeningSkill : MonoBehaviour
 {
 
-    public Rigidbody Cryos;
+    public GameObject CryosInstance;
     public Transform Instantiationpoint;
     public GameObject CryosPreview;
 
-
-
-
+    private void Start()
+    {
+       
+    }
     // Update is called once per frame
     void Update()
     {
-
+        //check for the cryonis effect script
         Cryonis cryoCheck
-           = gameObject.GetComponent<Cryonis>();
-
-        if (Input.GetKey(KeyCode.Space))
+          = FindObjectOfType<Cryonis>();
+        //set preview gameobject active if it is over water
+        if (Input.GetKey(KeyCode.Space) && cryoCheck.overWater == true)
         {
             Debug.Log("AbilityActivated");
             CryosPreview.SetActive(true);
-            if (cryoCheck.overWater == false)
-            {
-                {
-                    Debug.Log("Unavailable");
-                    CryosPreview.SetActive(false);
-                }
-            }
-            else
-            {
-                CryosPreview.SetActive(false);
-            }
+        }
+        else
+        {
+            Debug.Log("Inactive");
+            CryosPreview.SetActive(false);
+        }
 
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                if (cryoCheck.overWater == true)
-                    Debug.Log("Instantiate Ice");
-               // Rigidbody CryosInstance;
-              //  CryosInstance = Instantiate(Cryos, Instantiationpoint.position, Instantiationpoint.rotation);
-            }
-
+        //use script to check if the instantiation point is over water
+    if (Input.GetKeyDown(KeyCode.R) && (cryoCheck.overWater == true))
+        {
+            Debug.Log("Instantiate Successful");
+            GameObject IceCube;
+            IceCube = Instantiate(CryosInstance, Instantiationpoint.position, Instantiationpoint.rotation);
+            CryosPreview.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("cannot instantiate");
+        }
+       
+    }
 
        //     if (Input.GetButtonDown("Fire1"))
             //{
@@ -58,11 +59,12 @@ public class ListeningSkill : MonoBehaviour
                   //      Debug.Log(hit.transform.name);
                       //  IcePrefab.Destruct();
                     }
-                }
+                
 
-            }
+            
       //  }
   //  }
 //}
 
 
+   

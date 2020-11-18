@@ -5,9 +5,9 @@ using UnityEngine;
 public class Cryonis : MonoBehaviour
 {
     // Update is called once per frame
-   public ParticleSystem CyrosEffect;
-    private Vector3 mOffset;
-    private float mZCord;
+  // public ParticleSystem CyrosEffect;
+  //  private Vector3 mOffset;
+   // private float mZCord;
     public bool overWater;
     public Transform waterCheck;
     public float waterDistance = 0.4f;
@@ -17,13 +17,7 @@ public class Cryonis : MonoBehaviour
     void Update()
     {
        overWater = Physics.CheckSphere(waterCheck.position, waterDistance, waterMask);
-        CryoControl cryoControl
-             = gameObject.GetComponent<CryoControl>();
-
-        ThirdPersonMove thirdpers
-            = gameObject.GetComponent<ThirdPersonMove>();
-
-        
+     
 
         if (overWater)
         {
@@ -32,6 +26,7 @@ public class Cryonis : MonoBehaviour
         }
         else
         {
+            Debug.Log("Unavailable");
             showfreeze.SetActive(false);
         }
 

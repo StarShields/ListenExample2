@@ -13,36 +13,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01, z: 0.01}
   m_Center: {x: 0, y: 0.004998302, z: 0}
---- !u!1 &3412469962603485227
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1126184004438970605}
-  m_Layer: 0
-  m_Name: WaterCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1126184004438970605
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3412469962603485227}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.46, y: 0, z: -0.122}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7832750911863234119}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7832750910959071627
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +48,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.4877987, y: 0.39281416}
+  m_AnchoredPosition: {x: -0.4877987, y: -0.015}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!198 &7832750910959071631
@@ -4826,8 +4796,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7832750911594459089}
-  - component: {fileID: 7832750911594459090}
+  - component: {fileID: 6091022006439025972}
   m_Layer: 0
   m_Name: IceCube
   m_TagString: Cryo
@@ -4835,45 +4804,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7832750911594459089
-RectTransform:
+--- !u!4 &6091022006439025972
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7832750911594459091}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.17230368}
+  m_LocalPosition: {x: -0.40081215, y: 0.007314205, z: -0.17230368}
   m_LocalScale: {x: 1, y: 0.7113619, z: 1}
   m_Children:
   - {fileID: 3010992503514984021}
   m_Father: {fileID: 7832750911863234119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.40081215, y: 0.007314205}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7832750911594459090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7832750911594459091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f779bbe6e41f647b54050063ab9125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CyrosEffect: {fileID: 7832750910959071631}
-  overWater: 0
-  waterCheck: {fileID: 0}
-  waterDistance: 0.4
-  waterMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &7832750911863234112
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,10 +4829,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7832750911863234119}
   - component: {fileID: 244285925463856631}
-  - component: {fileID: 4073762209811645611}
   - component: {fileID: 8056259401826031}
   m_Layer: 0
-  m_Name: IceTestPrefab
+  m_Name: IceCubePrefab
   m_TagString: Cryo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4901,12 +4845,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7832750911863234112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.48, y: -3.7823546, z: -4.66}
-  m_LocalScale: {x: 1, y: 4.8936076, z: 1}
+  m_LocalPosition: {x: 13.177, y: -4.1095, z: -3.9305}
+  m_LocalScale: {x: 5.2336, y: 25.611185, z: 5.2336}
   m_Children:
-  - {fileID: 7832750911594459089}
+  - {fileID: 6091022006439025972}
   - {fileID: 7832750910959071626}
-  - {fileID: 1126184004438970605}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4921,30 +4864,11 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4073762209811645611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7832750911863234112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f779bbe6e41f647b54050063ab9125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CyrosEffect: {fileID: 7832750910959071631}
-  overWater: 0
-  waterCheck: {fileID: 1126184004438970605}
-  waterDistance: 0.4
-  waterMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!95 &8056259401826031
 Animator:
   serializedVersion: 3
@@ -4969,13 +4893,8 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7832750911594459089}
+    m_TransformParent: {fileID: 6091022006439025972}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b1c82c912af18494691fbb437e233efd,
-        type: 3}
-      propertyPath: m_Name
-      value: IceCube
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1c82c912af18494691fbb437e233efd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5045,6 +4964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 102.03327
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b1c82c912af18494691fbb437e233efd,
+        type: 3}
+      propertyPath: m_Name
+      value: IceCube
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: b1c82c912af18494691fbb437e233efd,
         type: 3}

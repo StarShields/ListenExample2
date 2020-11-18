@@ -3,7 +3,12 @@ guid: 4da400e59aebfd841870460f6b6424c7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Cryos: {fileID: 244285925463856631, guid: a115f18a2d7daf944aaf2f9d1d3f4606, type: 3}
+  - Instantiationpoint: {fileID: 8666434133558591190, guid: 35a5157de584f994ead2df30aa2ec23b,
+      type: 3}
+  - CryosPreview: {fileID: 7832750911863234112, guid: a115f18a2d7daf944aaf2f9d1d3f4606,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
